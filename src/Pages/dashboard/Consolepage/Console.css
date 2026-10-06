@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cmd-desktop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  font-family: 'Consolas', 'Courier New', monospace;
+  cursor: default;
+  font-weight: 900;
+}
+
+.cmd-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #2d2d2d;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  color: white;
+  z-index: 1000;
+  border-top-right-radius: 4px;
+}
+
+.cmd-window {
+  position: absolute;
+  background: #0c0c0c;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  min-width: 600px;
+  min-height: 400px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.cmd-maximized {
+  border-radius: 0;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Windows 11 Style Header */
+.cmd-title-bar {
+  background: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d2d2d;
+  min-height: 48px;
+  cursor: default;
+}
+
+.cmd-tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  overflow-x: auto;
+  padding-left: 8px;
+}
+
+.cmd-tabs-container::-webkit-scrollbar {
+  height: 0;
+}
+
+.cmd-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #1e1e1e;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.1s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.cmd-tab:hover {
+  background: #2d2d2d;
+}
+
+.cmd-tab-active {
+  background: #0c0c0c;
+  color: white;
+}
+
+.cmd-tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0078d4;
+}
+
+.cmd-tab-icon {
+  font-size: 14px;
+}
+
+.cmd-tab-title {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cmd-tab-close {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+
+.cmd-tab-close:hover {
+  background: #e81123;
+  color: white;
+}
+
+.cmd-new-tab {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+
+.cmd-new-tab:hover {
+  background: #2d2d2d;
+  color: white;
+}
+
+/* Window Buttons */
+.cmd-buttons {
+  display: flex;
+  gap: 4px;
+  padding-right: 12px;
+}
+
+.cmd-buttons button {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0e0e0;
+  transition: all 0.1s ease;
+  border-radius: 4px;
+}
+
+.cmd-buttons button:hover {
+  background: #2d2d2d;
+}
+
+.cmd-btn-close:hover {
+  background: #e81123;
+  color: white;
+}
+
+/* Content Area */
+.cmd-content {
+  flex: 1;
+  background: #0c0c0c;
+  color: #f0f0f0;
+  padding: 12px 16px;
+  overflow-y: auto;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: text;
+}
+
+.cmd-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cmd-content::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.cmd-content::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 5px;
+}
+
+.cmd-content::-webkit-scrollbar-thumb:hover {
+  background: #3d3d3d;
+}
+
+.cmd-output-area {
+  margin-bottom: 8px;
+}
+
+.cmd-command-line {
+  margin: 4px 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cmd-prompt {
+  color: #ffd000;
+  white-space: pre;
+}
+
+.cmd-command {
+  color: #f0f0f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.cmd-output-text {
+  color: #f0f0f0d5;
+  margin: 4px 0 12px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 17px;
+}
+
+.cmd-input-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.cmd-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #f0f0f0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  outline: none;
+  padding: 0;
+}
+
+.cmd-input:focus {
+  outline: none;
+}
+
+::selection {
+  background: #0078d4;
+  color: white;
+}
+
+@keyframes cmdWindowOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cmd-window {
+  animation: cmdWindowOpen 0.1s ease-out;
+}

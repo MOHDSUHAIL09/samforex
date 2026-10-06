@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../src/**/*.{js,jsx,ts,tsx}";
+
+/* ✅ Dynamic classes ke liye safelist */
+@source inline("{bg-gradient-to-r,bg-gradient-to-br,bg-gradient-to-b}");
+@source inline("{from-cyan-400,from-cyan-500,from-blue-400,from-blue-500}");
+@source inline("{to-blue-500,to-blue-600,to-cyan-500,to-cyan-600}");
+@source inline("{via-purple-500,via-pink-500,via-indigo-500}");
+@source inline("hover:{from-cyan-500,to-blue-700}");
+@source inline("{shadow-cyan-500/50,shadow-blue-500/50}");
+
+@layer utilities {
+  .perspective-1000 { perspective: 1000px; }
+  .perspective-1200 { perspective: 1200px; }
+  .transform-style-3d { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+}

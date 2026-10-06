@@ -1,0 +1,509 @@
+/* InvestToken.css - Complete Fixed Dark Theme with Modal */
+
+/* ===== WRAPPER ===== */
+.apex-mining-app {
+  padding: 30px 15px;
+  min-height: 100vh;
+  font-family: "Outfit", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.apex-mining-app .apex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 40px;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.apex-mining-app .apex-header h1 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* ===== GRID ===== */
+.apex-mining-app .apex-tiers-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.apex-mining-app .apex-tier-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.apex-mining-app .apex-tier-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* ===== GLOW CIRCLE ===== */
+.apex-mining-app .apex-tier-card::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.15);
+  pointer-events: none;
+}
+
+
+/* ===== TIER BADGE ===== */
+.apex-mining-app .apex-tier-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== TITLE ===== */
+.apex-mining-app .apex-tier-card h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== AMOUNT RANGE ===== */
+.apex-mining-app .apex-investment-range {
+  font-size: 26px;
+  font-weight: 800;
+  color: #facc15;
+  margin-bottom: 20px;
+  background: rgba(250, 204, 21, 0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+  border: 1px solid rgba(250, 204, 21, 0.1);
+}
+
+/* ===== LOCKUP ===== */
+.apex-mining-app .apex-lockup {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #93c5fd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ===== RETURN ===== */
+.apex-mining-app .apex-return {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ===== INVEST GROUP ===== */
+.apex-mining-app .apex-invest-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ===== INPUT ===== */
+.apex-mining-app .apex-invest-group input {
+  width: 100%;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  padding: 0 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.apex-mining-app .apex-invest-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.apex-mining-app .apex-invest-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.apex-mining-app .apex-invest-group input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.apex-mining-app .apex-invest-group input[type="number"]::-webkit-inner-spin-button,
+.apex-mining-app .apex-invest-group input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.apex-mining-app .apex-invest-group input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ===== BUTTON ===== */
+.apex-mining-app .apex-invest-group button {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* ======================================== */
+/* ===== TOAST NOTIFICATION ===== */
+/* ======================================== */
+.apex-mining-app .apex-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 10000;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  animation: slideIn 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.apex-mining-app .apex-toast.success {
+  background: rgba(16, 185, 129, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.apex-mining-app .apex-toast.error {
+  background: rgba(239, 68, 68, 0.95);
+  color: #ffffff;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ======================================== */
+/* ===== SUCCESS MODAL - FIXED ===== */
+/* ======================================== */
+.apex-mining-app .apex-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.apex-mining-app .apex-modal-content {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 40px 45px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  animation: scaleUp 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.apex-mining-app .apex-modal-content::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.08);
+  pointer-events: none;
+}
+
+.apex-mining-app .apex-modal-content::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(124, 58, 237, 0.08);
+  pointer-events: none;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.apex-mining-app .apex-modal-icon {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.apex-mining-app .apex-modal-content h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.apex-mining-app .apex-modal-details {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.apex-mining-app .apex-modal-details p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.apex-mining-app .apex-modal-details p:last-child {
+  border-bottom: none;
+}
+
+.apex-mining-app .apex-modal-details p strong {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.apex-mining-app .apex-modal-details p span {
+  color: #facc15;
+  font-weight: 700;
+}
+
+.apex-mining-app .apex-modal-message {
+  color: #93c5fd;
+  font-size: 0.95rem;
+  margin-bottom: 22px;
+  padding: 10px 14px;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: 10px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.apex-mining-app .apex-modal-btn {
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  border: none;
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  width: 100%;
+}
+
+.apex-mining-app .apex-modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* ======================================== */
+/* ===== RESPONSIVE ===== */
+/* ======================================== */
+@media (max-width: 1024px) {
+  .apex-mining-app .apex-tiers-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .apex-mining-app .apex-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem;
+  }
+
+  .apex-mining-app .apex-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .apex-mining-app .apex-tiers-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .apex-mining-app .apex-tier-card {
+    padding: 25px 20px;
+  }
+
+  .apex-mining-app .apex-btn-history {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .apex-mining-app .apex-investment-range {
+    font-size: 22px;
+  }
+
+  .apex-mining-app .apex-modal-content {
+    padding: 30px 25px;
+  }
+
+  .apex-mining-app .apex-modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .apex-mining-app .apex-toast {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    font-size: 0.9rem;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apex-mining-app {
+    padding: 15px 10px;
+  }
+
+  .apex-mining-app .apex-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .apex-mining-app .apex-tier-card h2 {
+    font-size: 24px;
+  }
+
+  .apex-mining-app .apex-investment-range {
+    font-size: 18px;
+  }
+
+  .apex-mining-app .apex-invest-group input,
+  .apex-mining-app .apex-invest-group button {
+    height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .apex-mining-app .apex-modal-content {
+    padding: 25px 18px;
+  }
+
+  .apex-mining-app .apex-modal-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .apex-mining-app .apex-modal-details p {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .apex-mining-app .apex-modal-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .apex-mining-app .apex-modal-icon {
+    font-size: 3rem;
+  }
+}

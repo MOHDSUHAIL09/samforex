@@ -1,0 +1,537 @@
+.mediic-appoinment {
+  position: relative;
+  background-image: url(/src/assets/images/auth.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.mediic-appoinment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.251); 
+  z-index: 1;
+}
+           
+
+.auth-form {
+   position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) 
+}
+
+.signup-side-image {
+  height: 600px;
+}
+
+.contact-form-box {
+  padding: 15px 0 0;
+}
+
+.form-box input::placeholder {
+  font-size: 17px;
+  color: #002570;
+}
+
+.form-box input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  outline: 0;
+  display: inline-block;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 37, 112, 0.5);
+  font-weight: 500;
+  font-family: "DM Sans";
+  font-size: 18px;
+}
+
+/* Left column image styling */
+.signup-left-col {
+  display: flex;
+}
+
+.laboix-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none !important;
+  color: #fff;
+  padding: 19px 41.5px;
+  transition: 500ms;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 112.5%;
+  background-color: #0e57ccc8;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.laboix-btn::before {
+  content: "";
+  height: 0px;
+  width: 0px;
+  background-color: var(--laboix-base, #021936);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+h4 {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+
+.Sign-text {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: gray;
+}
+
+.laboix-btn:hover {
+  color: #fff;
+}
+
+.laboix-btn:hover::before {
+  height: 400px;
+  width: 200%;
+  top: -70%;
+  left: -50%;
+}
+
+
+
+/* sucees signup model */
+/* ========== SUCCESS MODAL CSS ========== */
+
+/* Modal Overlay - Background blur */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Main Modal Container */
+.success-modal02 {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  animation: modalSlide 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modalSlide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header - Green Gradient */
+.modal-header02 {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  padding: 20px 24px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* Success Icon */
+.success-icon02 {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Registration Text */
+.Registration-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  flex: 1;
+}
+
+/* Close Button */
+.modal-close02 {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close02:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body02 {
+  padding: 24px;
+}
+
+/* User Details Card */
+.user-details-card02 {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Account Text */
+.Account-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+  display: inline-block;
+}
+
+.Account-text svg {
+  margin-right: 8px;
+  color: #4CAF50;
+}
+
+/* Each Row */
+.detail-row02 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row02:last-child {
+  border-bottom: none;
+}
+
+/* Label */
+.detail-label02 {
+  font-weight: 600;
+  color: #555;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-label02 svg {
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+/* Value */
+.detail-value02 {
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  word-break: break-word;
+  text-align: right;
+}
+
+/* Copy Button */
+.copy-btn02 {
+  background: #e0e0e0;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.copy-btn02:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.copy-btn02 svg {
+  font-size: 11px;
+}
+
+/* Modal Actions - Button Container */
+.modal-actions02 {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Login Button */
+.btn-dashboard02 {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-dashboard02:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+  .modal-header02 {
+    padding: 16px 20px;
+  }
+  
+  .success-icon02 {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+  
+  .Registration-text {
+    font-size: 18px;
+  }
+  
+  .modal-body02 {
+    padding: 18px;
+  }
+  
+  .user-details-card02 {
+    padding: 16px;
+  }
+  
+  .detail-row02 {
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .detail-value02 {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .btn-dashboard02 {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MetaMask Button Styles */
+.metamask-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #f6851b, #e2761b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.metamask-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(246, 133, 27, 0.4);
+}
+
+.metamask-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Wallet Connected Styles */
+/* .wallet-connected {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border: 1px solid #4CAF50;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+} */
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wallet-icon {
+  color: #f6851b;
+  font-size: 24px;
+}
+
+.wallet-address {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2e7d32;
+  background: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.disconnect-wallet {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.disconnect-wallet:hover {
+  background: #c82333;
+  transform: scale(1.02);
+}
+
+
+
+.country-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.country-input {
+  height: 46px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 16px;
+  background: white;
+  cursor: pointer;
+}
+
+.country-dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  max-height: 250px;   /* 6 items */
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.country-item {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.country-item:hover {
+  background: #f3f4f6;
+}
+
+
+
