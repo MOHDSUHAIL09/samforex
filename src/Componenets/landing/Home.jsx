@@ -482,7 +482,7 @@ const sectionStyle = {
                       <div className="content">
                         <h3 className="mb-3">Trade Apex</h3>
                         <p>Trading is the art and science of buying and selling financial instruments, suc stocks, bonds, currencies commodities, and cryptocurrencies, with the aim of making a profit. It's a dynamic and multifaceted professionals from around the world.</p>
-                        <a href="about.html" className="cmn-btn link secondary-link fs-six-up gap-2 gap-lg-3 align-items-center mt-5"> Learn more <i className="ti ti-arrow-narrow-right fs-four"></i></a>
+                        <a href="#" className="cmn-btn link secondary-link fs-six-up gap-2 gap-lg-3 align-items-center mt-5"> Learn more <i className="ti ti-arrow-narrow-right fs-four"></i></a>
                       </div>
                     </div>
                   </div>
@@ -510,7 +510,7 @@ const sectionStyle = {
             <div className="row gy-6 gy-xxl-0">
               <div className="col-md-6 col-xxl-4">
                 <div className="provide-world__card01 nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
-                  <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-award-filled fs-three p1-color"></i></span>
+                  <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-award fs-three p1-color"></i></span>
                   <h4 className="mt-5 mb-5 text-white">Best Reputation</h4>
                   <p>transformed the trading landscape. Online trading platforms and mobile apps have made it easier than ever for individuals</p>
                 </div>
@@ -524,7 +524,7 @@ const sectionStyle = {
               </div>
               <div className="col-md-6 col-xxl-4">
                 <div className="provide-world__card01 nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
-                  <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-shield-check-filled fs-three p1-color"></i></span>
+                  <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-shield-check fs-three p1-color"></i></span>
                   <h4 className="mt-5 mb-5 text-white">Trusted and Secure</h4>
                   <p>Trading is not without its challenges, as markets can be highly volatile and unpredictable. It requires discipline</p>
                 </div>
@@ -534,7 +534,7 @@ const sectionStyle = {
         </section>
 
         {/* provide-world start (heat map) */}
-        <section id="markets" className="provide-world pt-120 pb-120 position-relative z-0">
+        <section id="markets" className="provide-world a2-bg pt-120 pb-120 position-relative z-0">
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
             <img src={vectorImg} alt="vector" className="position-absolute top-0 pt-120 ms-20 ps-xxl-20 jello d-none d-xl-flex"style={{width: '160px'}} />
             <img src={vector9Img} alt="vector" className="position-absolute rotate top-0 end-0 p-20 mt-5 me-7 d-none d-xxxl-flex" />
@@ -565,7 +565,7 @@ const sectionStyle = {
         </section>
 
         {/* Trade On start */}
-        <section id="trade-on-our" className="trade_on a2-bg pt-120 pb-120 position-relative z-0">
+        <section id="trade-on-our" className="trade_on pt-120 pb-120 position-relative z-0">
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
             <img src={coinImg} alt="vector" className="position-absolute d-none d-md-flex previewShapeRevX" />
             <img src={star2Img} alt="vector" className="position-absolute d-none d-xl-flex push_animat" />
@@ -597,7 +597,7 @@ const sectionStyle = {
         </section>
 
         {/* blog_news start */}
-        <section className="blog_news pt-120 pb-120 position-relative z-0">
+        <section className="blog_news pt-120 a2-bg pb-120 position-relative z-0">
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
             <img src={starImg} alt="vector" className="position-absolute" />
             <img src={vector2Img} alt="vector" className="position-absolute bottom-0 start-0" />
@@ -666,7 +666,7 @@ const sectionStyle = {
         </section>
 
         {/* FAQ Section Starts */}
-        <section id="faq" className="faq a2-bg pb-120 pt-120 position-relative z-0">
+        <section id="faq" className="faq pb-120 pt-120 position-relative z-0">
           <div className="animation vector position-absolute top-0 left-0 w-100 h-100 z-n1">
             <img src={buttonImg} alt="vector" className="position-absolute pt-6 pt-xl-15 previewShapeRevX d-none d-md-flex" />
             <img src={star2Img} alt="vector" className="position-absolute push_animat end-0 top-0 mt-20 pt-5 me-xl-20 pe-5 d-none d-md-flex" />
@@ -773,7 +773,7 @@ const sectionStyle = {
               <div className="footer__part">
                 <h4 className="mb-6 mb-lg-8 text-white">Contact Us</h4>
                 <div className="d-flex flex-column gap-2 gap-sm-3 gap-md-4">
-                  <a href="mailto:support@.com">support@abc.com</a>
+                  <a href="mailto:support@.com">support@samforex.com</a>
                   <a href="tel:+123456789">+0123 456 789</a>
                 </div>
               </div>
@@ -789,7 +789,6 @@ const sectionStyle = {
                   <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-facebook"></i></a></li>
                   <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-twitch"></i></a></li>
                   <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-instagram"></i></a></li>
-                  <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-discord-filled"></i></a></li>
                   <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-youtube"></i></a></li>
                 </ul>
               </div>
