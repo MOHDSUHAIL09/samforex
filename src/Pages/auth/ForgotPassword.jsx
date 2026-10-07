@@ -86,13 +86,7 @@ const ForgotPassword = () => {
       <div className="bd-bg">
         <div className="mediic-appoinment">
           <div className="container">
-            <div className="row g-4">
-              <div className="col-lg-6 d-flex justify-content-lg-center justify-content-start align-items-center">
-                <div className="d-flex justify-content-center align-items-center">
-                  {/* <img src={authimg} alt="signup-image" /> */}
-                </div>
-              </div> 
-              
+            <div className="row g-4">              
               <div className="col-lg-6">
                 <div className="auth-form">
                   <div className="mediic-section-title2">

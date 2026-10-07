@@ -588,12 +588,6 @@ const fetchSponsorDetails = async (sponsorId) => {
       <div className="mediic-appoinment">
         <div className="container">
           <div className="row g-4">
-            <div className="col-lg-6 d-flex justify-content-lg-center justify-content-start align-items-center">
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="text-center m-auto"></div>
-              </div>
-            </div>
-
             <div className="col-lg-6">
               <div className="auth-form">
                 <div className="mediic-section-title22">
