@@ -28,8 +28,8 @@ import vectorImg from "../../assets/images01/vector.png";
 import vector4Img from "../../assets/images01/vector4.png";
 import starFocusImg from "../../assets/images01/star_focus.png";
 
-import heroimg from '../../assets/images01/icon/hero.png'
-import heroBgVectorImg from "../../assets/images01/hero_bg_vector.png";
+// import heroimg from '../../assets/images01/icon/hero.png'
+// import heroBgVectorImg from "../../assets/images01/hero_bg_vector.png";
 
 import vector9Img from "../../assets/images01/vector9.png";
 import vectorRocket1Img from "../../assets/images01/vector_rocket1.png";
@@ -37,7 +37,13 @@ import vectorRocket1Img from "../../assets/images01/vector_rocket1.png";
 import vector20Img from "../../assets/images01/vector20.png";
 import faqImg from "../../assets/images01/faq.png";
 
+
+import heroback from '../../assets/images01/icon/heroback.png'
+import herobackmobile from '../../assets/images01/icon/herobackmobile.jpg'
+import star01 from '../../assets/images01/circle_star2.png'
+
 import { Link } from 'react-router-dom';
+import Marquee from './Marquee';
 
 const LandingPage = () => {
   const [isActive, setIsActive] = useState(false);
@@ -64,6 +70,9 @@ const LandingPage = () => {
   // ================= NAV ITEMS =================
   const navItems = [
     { label: "Home", id: "home" },
+
+
+
     { label: "Markets", id: "markets" },
     { label: "Trade On Our", id: "trade-on-our" },
     { label: "Traders", id: "traders" },
@@ -130,26 +139,31 @@ const LandingPage = () => {
     zIndex: 999,
     width: "100%",
     background: "#000",
-    padding: isMobile ? "12px 16px" : "20px",
+    padding: isMobile ? "12px 16px" : "10px",
     transition: "all 0.4s ease",
   };
 
-  const sectionStyle = {
-    backgroundImage: `url(${heroBgVectorImg})`,
-    backgroundColor: "#141414",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "left center",
-    backgroundSize: "cover",
-    height: "100vh"
-  };
+const sectionStyle = {
+  backgroundImage: `url(${isMobile ? herobackmobile : heroback})`,  // ✅ mobile/desktop switch
+  backgroundColor: "#141414",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: isMobile ? "center center" : "left center",  // ✅ mobile pe center
+  backgroundSize: "cover",
+  height: isMobile ? "auto" : "87vh",        // ✅ mobile pe auto height
+  minHeight: isMobile ? "100vh" : "87vh",     // ✅ mobile pe full screen
+  paddingTop: isMobile ? "20px" : "0",       // ✅ mobile pe header ke neeche space
+  paddingBottom: isMobile ? "60px" : "0",     // ✅ mobile pe bottom space
+};
 
   return (
     <>
+      <Marquee/>
       {/* Scroll To Top Start */}
       <button
         className={`scrollToTop d-none d-md-flex d-center rounded ${isActive ? "active" : ""}`}
         aria-label="scroll Bar Button"
         onClick={scrollToTop}
+        style={{background: "rgb(245, 192, 109)"}}
       >
         <i className="mat-icon fs-four nb4-color ti ti-arrow-up"></i>
       </button>
@@ -160,7 +174,7 @@ const LandingPage = () => {
         className={`header-section a2-bg header-menu w-100 ${scrolled ? "animated fadeInDown header-fixed" : ""}`}
         style={headerStyle}
       >
-        <div className="container d-center" style={{ width: "100%", padding: isMobile ? 0 : undefined }}>
+        <div className=" d-center" style={{ width: "100%", padding: isMobile ? 0 : undefined }}>
           <nav
             className="navbar"
             style={{
@@ -184,7 +198,7 @@ const LandingPage = () => {
                 <img
                   src={isMobile ? favLogo : logo}
                   alt="logo"
-                  style={{ maxWidth: isMobile ? "100px" : "140px" }}
+                  style={{ maxWidth: isMobile ? "100px" : "180px" }}
                 />
               </a>
             </div>
@@ -270,13 +284,13 @@ const LandingPage = () => {
                   }}
                 >
                   <Link to="/login" style={{ textDecoration: "none" }}>
-                    <div style={{ color: "#fff", fontWeight: "700", padding: "10px 0", display: "flex", alignItems: "center", gap: "6px" }}>
+                                        <div style={{ background: "#f5c06d", color: "#000", padding: "12px 20px", borderRadius: "12px", fontWeight: "700", display: "flex", justifyContent: "center", alignItems: "center", gap: "6px" }}>
                       Login <i className="ti ti-arrow-right"></i>
                     </div>
                   </Link>
 
                   <Link to="/signup" style={{ textDecoration: "none" }}>
-                    <div style={{ background: "#9AD953", color: "#000", padding: "12px 20px", borderRadius: "12px", fontWeight: "700", display: "flex", justifyContent: "center", alignItems: "center", gap: "6px" }}>
+                    <div style={{ background: "#f5c06d", color: "#000", padding: "12px 20px", borderRadius: "12px", fontWeight: "700", display: "flex", justifyContent: "center", alignItems: "center", gap: "6px" }}>
                       Sign Up <i className="ti ti-arrow-right"></i>
                     </div>
                   </Link>
@@ -288,13 +302,13 @@ const LandingPage = () => {
             {!isMobile && (
               <div style={{ display: "flex", alignItems: "center", gap: "16px", flexShrink: 0 }}>
                 <Link to="/login" style={{ textDecoration: "none" }}>
-                  <div style={{ color: "#9AD953", fontWeight: "700", display: "flex", alignItems: "center", gap: "6px", cursor: "pointer", whiteSpace: "nowrap" }}>
+                  <div style={{ color: "#f5c06d", fontWeight: "700", display: "flex", alignItems: "center", gap: "6px", cursor: "pointer", whiteSpace: "nowrap" }}>
                     Login <i className="ti ti-arrow-right"></i>
                   </div>
                 </Link>
 
                 <Link to="/signup" style={{ textDecoration: "none" }}>
-                  <div style={{ background: "#9AD953", color: "#000", padding: "10px 20px", borderRadius: "12px", fontWeight: "700", display: "flex", alignItems: "center", gap: "6px", cursor: "pointer", whiteSpace: "nowrap" }}>
+                  <div style={{ background: "#f5c06d", color: "#000", padding: "10px 20px", borderRadius: "12px", fontWeight: "700", display: "flex", alignItems: "center", gap: "6px", cursor: "pointer", whiteSpace: "nowrap" }}>
                     Sign Up <i className="ti ti-arrow-right"></i>
                   </div>
                 </Link>
@@ -321,11 +335,12 @@ const LandingPage = () => {
                   position: "relative",
                   flexShrink: 0,
                   marginLeft: "auto",
+                  
                 }}
               >
-                <span style={{ display: "block", width: "24px", height: "2px", background: "#9AD953", borderRadius: "2px", position: "absolute", transition: "all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)", transform: menuOpen ? "rotate(45deg)" : "translateY(-8px)" }}></span>
-                <span style={{ display: "block", width: "24px", height: "2px", background: "#9AD953", borderRadius: "2px", position: "absolute", transition: "all 0.3s ease", opacity: menuOpen ? 0 : 1, transform: menuOpen ? "translateX(20px)" : "translateY(0)" }}></span>
-                <span style={{ display: "block", width: "24px", height: "2px", background: "#9AD953", borderRadius: "2px", position: "absolute", transition: "all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)", transform: menuOpen ? "rotate(-45deg)" : "translateY(8px)" }}></span>
+                <span style={{ display: "block", width: "24px", height: "2px", background: "#ecb074", borderRadius: "2px", position: "absolute", transition: "all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)", transform: menuOpen ? "rotate(45deg)" : "translateY(-8px)" }}></span>
+                <span style={{ display: "block", width: "24px", height: "2px", background: "#ecb074", borderRadius: "2px", position: "absolute", transition: "all 0.3s ease", opacity: menuOpen ? 0 : 1, transform: menuOpen ? "translateX(20px)" : "translateY(0)" }}></span>
+                <span style={{ display: "block", width: "24px", height: "2px", background: "#ecb074", borderRadius: "2px", position: "absolute", transition: "all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)", transform: menuOpen ? "rotate(-45deg)" : "translateY(8px)" }}></span>
               </button>
             )}
           </nav>
@@ -333,64 +348,111 @@ const LandingPage = () => {
       </header>
       {/* header-section end */}
 
-      {/* hero section start */}
-      <section
-        id="home"
-        className="hero-section--secondary position-relative z-0"
-        style={sectionStyle}
-      >
-        <div className="container pt-5 pt-lg-20 mt-5 mt-lg-20">
-          <div className="row align-items-center gy-5 gy-lg-0">
-            <div className="col-12 col-lg-6 col-xxl-7">
-              <div className="hero-content">
-                <div
-                  className="banner_content--sub text--base fw-medium right-reveal"
-                  style={{ display: "flex", gap: "8px", alignItems: "center", marginBottom: "16px", color: "#9AD953", fontSize: "18px" }}
-                >
-                  Invest Smart, Trade Smarter
-                </div>
 
-                <h1
-                  className="right-reveal text-white"
-                  style={{ marginBottom: "20px", lineHeight: "1.2", fontSize: "clamp(28px, 5vw, 56px)",maxWidth: '600px'}}
-                >
-                  Professional Forex and Stock <span style={{ color: '#9AD953' }}> Trading Investments</span> 
-                </h1>
+{/* hero section start */}
+<section
+  id="home"
+  className="hero-section--secondary position-relative z-0"
+  style={sectionStyle}
+>
+  <div
+    className="container pt-5 pt-lg-20 mt-5 mt-lg-20"
+    style={{
+      opacity: 0.95,
+      paddingLeft: isMobile ? "20px" : "20px",
+      paddingRight: isMobile ? "20px" : "20px",
+    }}
+  >
+    <div className="row align-items-center gy-5 gy-lg-0">
+      <div className="col-12 col-lg-6 col-xxl-7">
+        <div className="hero-content">
 
-                <p
-                  className="fs-18 fw-medium right-reveal"
-                  style={{ color: "#b6b6b6", marginBottom: "28px", fontSize: "clamp(14px, 2vw, 18px)" }}
-                >
-                  Whether you're just starting or you're a seasoned trader, our
-                  platform offers comprehensive secure.
-                </p>
-
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", alignItems: "center" }}>
-                  <Link to="/login">
-                    <div
-                      className="cmn-btn secondary-alt fs-five nb4-xxl-bg"
-                      style={{ display: "inline-flex", alignItems: "center", gap: "10px", background: "#9AD953", color: "#000", padding: "12px 28px", borderRadius: "12px", fontWeight: "600", textDecoration: "none" }}
-                    >
-                      Start Trading <i className="ti ti-trending-up"></i>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12 col-lg-6 col-xxl-5">
-              <div className="hero-image text-center" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <img src={heroimg} alt="hero" style={{ maxWidth: "100%", height: "auto", width: "100%", objectFit: "contain" }} />
-              </div>
-            </div>
+          {/* Sub heading */}
+          <div
+            className="banner_content--sub text--base fw-medium right-reveal"
+            style={{
+              display: "flex",
+              gap: "8px",
+              alignItems: "center",
+              marginBottom: "16px",
+              color: "rgb(245, 192, 109)",
+              fontSize: isMobile ? "14px" : "18px",   // ✅ mobile pe chhota
+            }}
+          >
+            Invest Smart, Trade Smarter
           </div>
-        </div>
-      </section>
-      {/* hero section end */}
 
-      <main className="mt-[82px] xxl:mt-[98px]">
+          {/* Main heading */}
+          <h1
+            className="right-reveal text-white"
+            style={{
+              marginBottom: "20px",
+              lineHeight: "1.2",
+              fontSize: isMobile ? "32px" : "clamp(28px, 5vw, 56px)",  // ✅ mobile pe fix
+            }}
+          >
+           TRADE GLOBAL MARKETS
+            <span style={{ color: "rgb(245, 192, 109)" }}>
+              WITH SAMFOREX
+            </span>
+          </h1>
+
+          {/* Paragraph */}
+          <p
+            className="fs-18 fw-medium right-reveal"
+            style={{
+              color: "#fff",                          // ✅ mobile pe white better
+              opacity: 0.9,
+              marginBottom: "28px",
+              fontSize: isMobile ? "14px" : "clamp(14px, 2vw, 18px)",
+              maxWidth: isMobile ? "100%" : "600px",
+            }}
+          >
+            Whether you're just starting or you're a seasoned trader, <br />
+            our platform offers comprehensive secure.
+          </p>
+
+          {/* Button */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "16px",
+              alignItems: "center",
+            }}
+          >
+            <Link to="/login">
+              <div
+                className="cmn-btn secondary-alt fs-five nb4-xxl-bg"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  background: "rgb(245, 192, 109)",
+                  color: "#000",
+                  padding: isMobile ? "10px 20px" : "12px 28px",
+                  borderRadius: "12px",
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  fontSize: isMobile ? "14px" : "16px",
+                }}
+              >
+                Start Trading <i className="ti ti-trending-up"></i>
+              </div>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* hero section end */}
+
+
+
         {/* Why Trade start */}
-        <section className="why-trade s1-bg alt-color position-relative z-0">
+        <section className="why-trade s1-bg alt-color position-relative z-0" style={{marginTop: "1px"}}>
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
             <img src={sun} alt="vector" className="position-absolute push_animat" />
             <img src={star} alt="vector" className="position-absolute d-xxxl-flex previewSkew" />
@@ -433,7 +495,7 @@ const LandingPage = () => {
         {/* provide-world start */}
         <section id="traders" className="provide-world bg nb4-bg pt-120 pb-120 position-relative z-0">
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1 d-none d-md-flex">
-            <img src={buttonImg} alt="vector" className="position-absolute pt-6 pt-xl-15 previewShapeRevX" />
+            <img src={buttonImg} alt="vector" className="position-absolute pt-6 pt-xl-15 previewShapeRevX mt-5" style={{width: "150px"}} />
           </div>
           <div className="container">
             <div className="row justify-content-center">
@@ -447,21 +509,21 @@ const LandingPage = () => {
             </div>
             <div className="row gy-6 gy-xxl-0">
               <div className="col-md-6 col-xxl-4">
-                <div className="provide-world__card nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
+                <div className="provide-world__card01 nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
                   <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-award-filled fs-three p1-color"></i></span>
                   <h4 className="mt-5 mb-5 text-white">Best Reputation</h4>
                   <p>transformed the trading landscape. Online trading platforms and mobile apps have made it easier than ever for individuals</p>
                 </div>
               </div>
               <div className="col-md-6 col-xxl-4">
-                <div className="provide-world__card nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
+                <div className="provide-world__card01 nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
                   <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-users fs-three p1-color"></i></span>
                   <h4 className="mt-5 mb-5 text-white">480,000+ Clients</h4>
                   <p>One of the fundamental principles of trading is risk management. Successful traders carefully manage their capital,</p>
                 </div>
               </div>
               <div className="col-md-6 col-xxl-4">
-                <div className="provide-world__card nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
+                <div className="provide-world__card01 nb3-bg text-center cus-rounded-1 py-5 py-lg-10 px-4 px-lg-9">
                   <span className="provide-card__icon d-center nb4-bg p-4 rounded-circle mx-auto"><i className="ti ti-shield-check-filled fs-three p1-color"></i></span>
                   <h4 className="mt-5 mb-5 text-white">Trusted and Secure</h4>
                   <p>Trading is not without its challenges, as markets can be highly volatile and unpredictable. It requires discipline</p>
@@ -474,7 +536,7 @@ const LandingPage = () => {
         {/* provide-world start (heat map) */}
         <section id="markets" className="provide-world pt-120 pb-120 position-relative z-0">
           <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
-            <img src={vectorImg} alt="vector" className="position-absolute top-0 pt-120 ms-20 ps-xxl-20 jello d-none d-xl-flex" />
+            <img src={vectorImg} alt="vector" className="position-absolute top-0 pt-120 ms-20 ps-xxl-20 jello d-none d-xl-flex"style={{width: '160px'}} />
             <img src={vector9Img} alt="vector" className="position-absolute rotate top-0 end-0 p-20 mt-5 me-7 d-none d-xxxl-flex" />
             <img src={vectorRocket1Img} alt="vector" className="position-absolute bottom-0 start-0 d-none d-xxxl-flex pb-120 mb-10 ms-20 fadeInTopRight" />
           </div>
@@ -554,48 +616,48 @@ const LandingPage = () => {
             <div className="row gy-6">
               {/* Card 1 */}
               <div className="col-md-6 col-xxl-4">
-                <div className="blog_news__card nb3-bg cus-rounded-1 overflow-hidden">
+                <div className="blog_news__card0 nb3-bg cus-rounded-1 overflow-hidden">
                   <div className="blog_news__thumbs position-relative">
                     <img src={blogNewsImg} alt="Image" className="w-100" />
-                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5 ">News</a>
+                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5" style={{color: 'rgb(245, 192, 109)'}}>News</a>
                   </div>
                   <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
                     <a href="blog-details.html"><h5 className="mb-4 mb-lg-5 text-white">Trading Psychology: Mastering Your Mind for Profit</h5></a>
                     <div className="fs-seven fw_500 d-flex row-gap-0 flex-wrap gap-3 mb-4 mb-lg-5">August 17,2023 <span>|</span> Written by jason Turner</div>
                     <p>Trading in financial markets involves a wide employ to make informed decisions.</p>
-                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8"> Continue Reading <i className="ti ti-arrow-right"></i></a>
+                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8" style={{color: 'rgb(245, 192, 109)'}}> Continue Reading <i className="ti ti-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
 
               {/* Card 2 */}
               <div className="col-md-6 col-xxl-4">
-                <div className="blog_news__card nb3-bg cus-rounded-1 overflow-hidden">
+                <div className="blog_news__card0 nb3-bg cus-rounded-1 overflow-hidden">
                   <div className="blog_news__thumbs position-relative">
                     <img src={blogNews2Img} alt="Image" className="w-100" />
-                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5">Features</a>
+                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5" style={{color: 'rgb(245, 192, 109)'}}>Features</a>
                   </div>
                   <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
                     <a href="#"><h5 className="mb-4 mb-lg-5 text-white">Trading Pitfalls Common Mistakes and How to Avoid Them...</h5></a>
                     <div className="fs-seven fw_500 d-flex flex-wrap row-gap-0 gap-3 mb-4 mb-lg-5">August 17,2023 <span>|</span> Written by jason Turner</div>
                     <p>Trading in financial markets involves a wide employ to make informed decisions.</p>
-                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8"> Continue Reading <i className="ti ti-arrow-right"></i></a>
+                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8" style={{color: 'rgb(245, 192, 109)'}}> Continue Reading <i className="ti ti-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
 
               {/* Card 3 */}
               <div className="col-md-6 col-xxl-4">
-                <div className="blog_news__card nb3-bg cus-rounded-1 overflow-hidden">
+                <div className="blog_news__card0 nb3-bg cus-rounded-1 overflow-hidden">
                   <div className="blog_news__thumbs position-relative">
                     <img src={blogNews3Img} alt="Image" className="w-100" />
-                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5">News</a>
+                    <a href="#" className="border border-color second nw1-color fs-seven rounded-3 position-absolute top-0 end-0 py-1 px-3 mt-5 me-5" style={{color: 'rgb(245, 192, 109)'}}>News</a>
                   </div>
                   <div className="blog_news__content py-6 py-lg-7 py-xxl-8 px-4 px-lg-5 px-xxl-6">
                     <a href="#"><h5 className="mb-4 mb-lg-5 text-white">Trading Platforms: Tools for Success in Financial Markets</h5></a>
                     <div className="fs-seven fw_500 d-flex flex-wrap row-gap-0 gap-3 mb-4 mb-lg-5">August 17,2023 <span>|</span> Written by jason Turner</div>
                     <p>Trading in financial markets involves a wide employ to make informed decisions.</p>
-                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8"> Continue Reading <i className="ti ti-arrow-right"></i></a>
+                    <a href="#" className="link fs-five fw-semibold d-flex gap-2 gap-lg-3 align-items-center mt-6 mt-lg-8" style={{color: 'rgb(245, 192, 109)'}}> Continue Reading <i className="ti ti-arrow-right"></i></a>
                   </div>
                 </div>
               </div>
@@ -614,7 +676,7 @@ const LandingPage = () => {
             <div className="row justify-content-center">
               <div className="col-lg-8 col-xxl-7">
                 <div className="heading__content mb-10 mb-lg-15 text-center">
-                  <span className="heading fs-five p1-color mb-5">Faq's</span>
+                  <span className="heading fs-five mb-5" style={{color: 'rgb(245, 192, 109)'}}> Faq's</span>
                   <h3 className='text-white'>Frequently Asked Question</h3>
                 </div>
               </div>
@@ -648,7 +710,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-      </main>
+  
 
       {/* Footer Section Starts */}
       <footer className="footer a2-bg position-relative pt-15 pt-lg-0 z-0">
@@ -660,7 +722,7 @@ const LandingPage = () => {
           <div className="start-earning nb3-bg cus-rounded-2 d-flex align-items-center p-4 p-sm-6 p-md-10 p-lg-15 p-xl-20 pe-lg-6 pe-xl-16 overflow-hidden position-relative">
             <div className="vector_effect position-absolute d-center justify-content-end end-0 d-flex gap-20">
               <img src={star2Img} alt="vector" className="d-none d-xxl-flex push_animat" />
-              <img src={starFocusImg} alt="vector" className="d-none d-sm-flex rotate time_dur ms-auto ms-lg-0 me-md-5" />
+              <img src={star01} alt="vector" className="d-none d-sm-flex rotate time_dur ms-auto ms-lg-0 me-md-5" />
             </div>
             <div className="row gy-6 w-100 text-center text-sm-start align-items-center justify-content-sm-between">
               <div className="col-sm-8 text-white">
@@ -721,7 +783,7 @@ const LandingPage = () => {
             <div className="col-12 border-top border-color opac-20 py-7 py-xxl-8">
               <div className="footer__copyright d-center gap-15 flex-wrap justify-content-md-between">
                 <p className="fs-six order-2 order-md-0 text-center text-md-start">
-                  Copyright ©<span className="currentYear">2026</span> Sameforex <span>|</span> Designed By <a href="https://themeforest.net/user/uiaxis" className="p1-color"> UIAXIS</a>
+                  Copyright ©<span className="currentYear">2026</span> Sameforex <span>|</span> Designed By <a href="#" className="p1-color0" style={{color: "rgb(245, 192, 109)"}}> Samforex</a>
                 </p>
                 <ul className="social-area d-center gap-2 gap-md-3">
                   <li><a className="d-center cus-rounded-1 fs-four" href="#"><i className="ti ti-brand-facebook"></i></a></li>
