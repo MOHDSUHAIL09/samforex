@@ -157,7 +157,6 @@ const sectionStyle = {
 
   return (
     <>
-      <Marquee/>
       {/* Scroll To Top Start */}
       <button
         className={`scrollToTop d-none d-md-flex d-center rounded ${isActive ? "active" : ""}`}
@@ -449,7 +448,24 @@ const sectionStyle = {
 </section>
 {/* hero section end */}
 
-
+{/* marqueee */}
+ <div
+  className="mx-5"
+  style={{
+    background: "#fff",
+    borderRadius: "20px",
+    padding: "8px",           // ✅ inner spacing
+    overflow: "hidden",        // ✅ rounded corners ke liye
+    boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+    position: "relative",
+    marginTop: "50px"
+  }}
+>
+  <div style={{ borderRadius: "14px", overflow: "hidden" }}>
+    <Marquee />
+  </div>
+</div>
+{/* End marqueee */}
 
         {/* Why Trade start */}
         <section className="why-trade s1-bg alt-color position-relative z-0" style={{marginTop: "1px"}}>
