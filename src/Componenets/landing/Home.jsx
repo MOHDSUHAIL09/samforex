@@ -445,20 +445,22 @@ const sectionStyle = {
       </div>
     </div>
   </div>
+
+
+  
 </section>
-{/* hero section end */}
 
 {/* marqueee */}
  <div
-  className="mx-5"
+  className=""
   style={{
     background: "#fff",
-    borderRadius: "20px",
-    padding: "8px",           // ✅ inner spacing
-    overflow: "hidden",        // ✅ rounded corners ke liye
-    boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-    position: "relative",
-    marginTop: "50px"
+    // borderRadius: "20px",
+    // padding: "8px",           
+    // overflow: "hidden",      
+    // boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+    // position: "relative",
+    // marginTop: "50px"
   }}
 >
   <div style={{ borderRadius: "14px", overflow: "hidden" }}>
@@ -466,6 +468,8 @@ const sectionStyle = {
   </div>
 </div>
 {/* End marqueee */}
+
+{/* hero section end */}
 
         {/* Why Trade start */}
         <section className="why-trade s1-bg alt-color position-relative z-0" style={{marginTop: "1px"}}>
